@@ -42,5 +42,10 @@ class API(abc_api.Vehicle):
 			if lim == rec:
 				break
 		return recent_list
-
-
+		
+	def stats(self, product_id):
+		url = 'https://api.exchange.coinbase.com/products/' + product_id + '/stats'
+		headers = {"Accept": "application/json"}
+		response = requests.get(url, headers=headers)
+		json_response = response.json()
+		return json_response

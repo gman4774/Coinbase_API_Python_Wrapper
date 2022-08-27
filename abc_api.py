@@ -9,3 +9,6 @@ class Vehicle(ABC):
 	@abstractmethod
 	def trades(self):
 		pass
+	@abstractmethod
+	def stats(self):
+		pass
